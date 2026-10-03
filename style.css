@@ -1,0 +1,1117 @@
+/* ========================================= */
+/* WENDY'S BAKERY - COMPLETE STYLESHEET     */
+/* ========================================= */
+
+
+/* ========================================= */
+/* GLOBAL                                      */
+/* ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    background-color: lightblue;
+    color: white;
+    font-family: "Fredoka", sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: darkblue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
+
+p {
+    max-width: 600px;
+    margin: 0 auto;
+    width: 80%;
+}
+
+
+/* ========================================= */
+/* HEADINGS                                   */
+/* ========================================= */
+
+h1 {
+    color: darkblue;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px gray;
+}
+
+h2 {
+    color: darkblue;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 40px;
+}
+
+.tagline {
+    color: darkblue;
+    font-size: 18px;
+    text-align: center;
+    font-style: italic;
+    word-spacing: 8px;
+}
+
+.tagline span {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+
+/* ========================================= */
+/* NAVIGATION                                 */
+/* ========================================= */
+
+nav {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: white;
+    border-radius: 12px;
+    margin: 10px auto 20px;
+    width: calc(100% - 20px);
+    max-width: 1200px;
+}
+
+nav a {
+    background-color: darkblue;
+    color: white;
+    padding: 10px 18px;
+    display: inline-block;
+    border-radius: 80px;
+    transition: 0.3s;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: white;
+    color: darkblue;
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
+
+/* ========================================= */
+/* MAIN                                       */
+/* ========================================= */
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* ========================================= */
+/* GENERAL SECTIONS                           */
+/* ========================================= */
+
+section {
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 1100px;
+    min-height: 300px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    border: 2px solid darkblue;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+section > div {
+    flex: 1;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: white;
+    color: darkblue;
+    transition: 0.3s;
+}
+
+section > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+section > div p:last-child {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+section > div button {
+    background-color: darkblue;
+    color: white;
+    padding: 10px 50px;
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+section > div button:hover {
+    background-color: white;
+    color: darkblue;
+    border: 1px solid darkblue;
+    transform: scale(1.05);
+}
+
+section ul {
+    padding: 20px;
+}
+
+section li {
+    margin-bottom: 8px;
+}
+
+section h3 {
+    color: darkblue;
+    font-size: 22px;
+    margin-top: 0;
+}
+
+
+/* ========================================= */
+/* FORMS                                      */
+/* ========================================= */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+form label {
+    color: darkblue;
+    font-weight: 600;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid darkblue;
+    border-radius: 15px;
+    font-family: inherit;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: 2px solid darkblue;
+}
+
+form textarea {
+    min-height: 100px;
+    resize: vertical;
+    padding: 15px;
+}
+
+form button {
+    width: 100%;
+    background-color: darkblue;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+form button:hover {
+    background-color: white;
+    color: darkblue;
+    border: 1px solid darkblue;
+}
+
+form button:active {
+    transform: scale(0.98);
+}
+
+
+/* ========================================= */
+/* PRODUCT CARDS                              */
+/* ========================================= */
+
+.product-card {
+    flex: 0 0 calc(33.333% - 14px);
+    min-width: 0;
+    max-width: none;
+    background-color: white;
+    color: darkblue;
+    padding: 25px;
+    margin: 0;
+    border-radius: 30px;
+    border: 2px solid darkblue;
+    box-sizing: border-box;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.product-card p {
+    width: 100%;
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.product-card p:last-of-type {
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.product-card button {
+    width: 100%;
+    margin-top: auto;
+    background-color: darkblue;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 15px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.product-card button:hover {
+    background-color: white;
+    color: darkblue;
+    border: 2px solid darkblue;
+    transform: scale(1.02);
+}
+
+.product-card button:active {
+    transform: scale(0.97);
+}
+
+
+/* ========================================= */
+/* FEATURED CAKES - HOME PAGE                */
+/* ========================================= */
+
+.featured-cakes {
+    width: 100%;
+    max-width: 900px;
+    min-height: auto;
+    background-color: white;
+    color: darkblue;
+    padding: 25px;
+    margin: 30px auto;
+    border-radius: 30px;
+    border: 2px solid darkblue;
+    box-sizing: border-box;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.featured-cakes > h2 {
+    width: 100%;
+    margin-top: 0;
+}
+
+.featured-cake-card {
+    flex: 1;
+    min-width: 0;
+    background-color: lightblue;
+    padding: 15px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.featured-cake-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.featured-cake-card h3 {
+    color: darkblue;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.featured-cake-card p {
+    width: 100%;
+}
+.featured-shop-button {
+    flex-basis: 100%;
+    width: 250px;
+    max-width: 100%;
+    margin: 10px auto 0;
+    padding: 12px 20px;
+    background-color: darkblue;
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: 600;
+    box-sizing: border-box;
+    transition: 0.2s;
+}
+
+.featured-shop-button:hover {
+    background-color: white;
+    color: darkblue;
+    border: 2px solid darkblue;
+}
+
+
+/* ========================================= */
+/* REVIEW CARDS                               */
+/* ========================================= */
+
+.review-card {
+    flex: 1;
+    min-width: 0;
+    padding: 20px;
+    border-radius: 30px;
+    background-color: white;
+    color: darkblue;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid darkblue;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    justify-content: space-between;
+}
+
+.review-card h3 {
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.review-card p {
+    width: 100%;
+    margin: 5px 0;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+}
+
+.review-card .rating {
+    font-size: 18px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    border-bottom: 1px solid darkblue;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.review-date {
+    font-size: 13px;
+    margin-top: 15px;
+    opacity: 0.7;
+    font-style: italic;
+    text-align: right;
+    letter-spacing: 0.5px;
+}
+
+
+/* ========================================= */
+/* REVIEW FORM                                */
+/* ========================================= */
+
+.review-form-section {
+    background-color: white;
+    color: darkblue;
+    padding: 15px;
+    border-radius: 30px;
+    border: 2px solid darkblue;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.review-form-section h2 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#star-rating {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+#star-rating button {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    background: transparent;
+    color: #ccc;
+    border: none;
+    font-size: 38px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.2s ease;
+}
+
+#star-rating button:hover {
+    transform: scale(1.15);
+}
+
+#star-rating button.selected {
+    color: gold;
+}
+
+#star-rating button:active {
+    transform: scale(0.9);
+}
+
+.rating {
+    color: gold;
+    font-size: 24px;
+}
+
+.review-label {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0 0 10px;
+    opacity: 0.7;
+}
+
+.character-count {
+    font-size: 12px;
+    opacity: 0.6;
+    margin: 0;
+}
+
+.character-count.warning {
+    font-weight: 700;
+    color: purple;
+}
+
+.character-count.limit {
+    font-weight: 700;
+    color: red;
+}
+
+#review-message {
+    font-weight: 600;
+    text-align: center;
+    margin-top: 15px;
+    transition: opacity 0.3s ease;
+}
+
+#review-message.hide {
+    opacity: 0;
+}
+
+
+/* ========================================= */
+/* ORDER AREA                                 */
+/* ========================================= */
+
+#order-area {
+    background-color: white;
+    color: darkblue;
+    padding: 25px;
+    border-radius: 30px;
+    margin: 20px auto;
+    max-width: 500px;
+    box-sizing: border-box;
+    border: 2px solid darkblue;
+}
+
+#order-area h3 {
+    color: darkblue;
+    margin-top: 0;
+}
+
+#selected-cake,
+#selected-price {
+    color: darkblue;
+}
+
+#selected-cake {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+#selected-price {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 10px 0 20px;
+}
+
+label[for="quantity"] {
+    color: darkblue;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+#quantity {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid darkblue;
+    border-radius: 15px;
+    font-family: inherit;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin: 10px 0;
+    text-align: center;
+    color: darkblue;
+}
+
+#quantity:focus {
+    outline: 2px solid darkblue;
+}
+
+#order-area button {
+    background-color: darkblue;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 15px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#order-area button:hover {
+    background-color: white;
+    color: darkblue;
+    border: 1px solid darkblue;
+    transform: scale(1.03);
+}
+
+#order-area button:active {
+    transform: scale(0.95);
+}
+
+
+/* ========================================= */
+/* ORDER LIST                                 */
+/* ========================================= */
+
+#order-list {
+    background-color: white;
+    color: darkblue;
+    padding: 20px;
+    border-radius: 30px;
+    max-width: 500px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    border: 2px solid darkblue;
+}
+
+#order-list h3 {
+    margin-top: 0;
+}
+
+.order-item {
+    background: white;
+    color: darkblue;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 15px;
+    border: 2px solid darkblue;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.order-item button {
+    margin-left: 10px;
+    padding: 7px 12px;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.order-item button:hover {
+    background-color: white;
+    color: darkblue;
+    border: 1px solid darkblue;
+    transform: scale(1.05);
+}
+
+.order-item button:active {
+    transform: scale(0.95);
+}
+
+.order-item input {
+    width: 80px;
+    padding: 8px;
+    border: 2px solid darkblue;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 15px;
+    color: darkblue;
+    text-align: center;
+}
+
+
+/* ========================================= */
+/* GRAND TOTAL                                */
+/* ========================================= */
+
+#grand-total {
+    background-color: white;
+    color: darkblue;
+    padding: 15px 20px;
+    margin: 15px auto 30px;
+    max-width: 500px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    border: 2px solid darkblue;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+/* ========================================= */
+/* CUSTOMER DETAILS                           */
+/* ========================================= */
+
+#customer-details {
+    background-color: white;
+    color: darkblue;
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 500px;
+    border-radius: 30px;
+    border: 2px solid darkblue;
+    box-sizing: border-box;
+}
+
+#customer-details h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+#customer-details label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+#customer-details input,
+#customer-details textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid darkblue;
+    border-radius: 15px;
+    box-sizing: border-box;
+    font-family: "Fredoka", sans-serif;
+    font-size: 16px;
+    color: darkblue;
+}
+
+#customer-details textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+#customer-details input:focus,
+#customer-details textarea:focus {
+    outline: none;
+    border-width: 3px;
+}
+
+
+/* ========================================= */
+/* ORDER BUTTONS                              */
+/* ========================================= */
+
+#clear-order,
+#whatsapp-order {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 15px auto;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 15px;
+    font-family: "Fredoka", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#clear-order,
+#whatsapp-order {
+    background-color: darkblue;
+    color: white;
+}
+
+#clear-order:hover,
+#whatsapp-order:hover {
+    background-color: white;
+    color: darkblue;
+    border: 2px solid darkblue;
+    transform: scale(1.02);
+}
+
+#clear-order:active,
+#whatsapp-order:active {
+    transform: scale(0.97);
+}
+
+
+/* ========================================= */
+/* FOOTER                                     */
+/* ========================================= */
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: darkblue;
+}
+
+footer p {
+    width: 100%;
+    margin: 5px auto;
+}
+
+
+/* ========================================= */
+/* LARGE PC                                   */
+/* ========================================= */
+
+@media (min-width: 1200px) {
+
+    main {
+        max-width: 1200px;
+    }
+
+    nav {
+        max-width: 1200px;
+    }
+
+    .product-card {
+        flex: 0 0 calc(33.333% - 14px);
+    }
+
+    .featured-cake-card {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .review-card {
+        min-width: 0;
+    }
+}
+
+
+/* ========================================= */
+/* DESKTOP / LAPTOP                          */
+/* ========================================= */
+
+@media (min-width: 768px) {
+
+    nav {
+        flex-direction: row;
+    }
+
+    .product-card {
+        flex: 0 0 calc(33.333% - 14px);
+    }
+
+    .review-card {
+        min-width: 0;
+    }
+
+    .featured-cake-card {
+        min-width: 0;
+    }
+}
+
+
+/* ========================================= */
+/* TABLETS                                    */
+/* ========================================= */
+
+@media (min-width: 576px) and (max-width: 767px) {
+
+    main {
+        padding: 15px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    .product-card {
+        flex: 0 0 calc(50% - 10px);
+    }
+
+    .review-card {
+        flex: 0 0 calc(50% - 10px);
+    }
+
+    .featured-cake-card {
+        flex: 0 0 calc(50% - 10px);
+    }
+
+    .product-card img {
+        height: 200px;
+    }
+
+    .featured-cake-card img {
+        height: 180px;
+    }
+}
+
+
+/* ========================================= */
+/* PHONES                                     */
+/* ========================================= */
+
+@media (max-width: 575px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    main {
+        width: 100%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: 25px;
+        margin-top: 30px;
+    }
+
+    .tagline {
+        font-size: 16px;
+        word-spacing: 4px;
+        padding: 0 10px;
+    }
+
+
+    /* NAVIGATION */
+
+    nav {
+        width: calc(100% - 20px);
+        margin: 10px auto 20px;
+        padding: 10px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    /* SECTIONS */
+
+    section {
+        width: 100%;
+        padding: 12px;
+        margin: 20px auto;
+        border-radius: 20px;
+        flex-direction: column;
+    }
+
+    section > div {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    /* PRODUCT CARDS */
+
+    .product-card {
+        width: 100%;
+        flex: 0 0 100%;
+        min-width: 0;
+        margin: 10px auto;
+        padding: 18px;
+        border-radius: 25px;
+    }
+
+    .product-card h3 {
+        font-size: 21px;
+    }
+
+    .product-card img {
+        width: 100%;
+        height: 180px;
+        border-radius: 15px;
+    }
+
+    .product-card button {
+        width: 100%;
+    }
+
+
+    /* REVIEW CARDS */
+
+    .review-card {
+        width: 100%;
+        flex: 0 0 100%;
+        min-width: 0;
+        margin-bottom: 15px;
+    }
+
+
+    /* ORDER SYSTEM */
+
+    #order-area,
+    #order-list,
+    #customer-details {
+        width: 100%;
+        max-width: 500px;
+        padding: 20px;
+        border-radius: 25px;
+    }
+
+    #grand-total {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    #clear-order,
+    #whatsapp-order {
+        width: 100%;
+    }
+
+    #quantity {
+        width: 100%;
+    }
+
+
+    /* ORDER ITEMS */
+
+    .order-item {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .order-item input {
+        width: 100%;
+    }
+
+    .order-item button {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+    /* FEATURED CAKES */
+
+    .featured-cakes {
+        width: 100%;
+        padding: 15px;
+        border-radius: 25px;
+    }
+
+    .featured-cake-card {
+        width: 100%;
+        flex: 0 0 100%;
+        min-width: 0;
+    }
+
+    .featured-cake-card img {
+        width: 100%;
+        height: 180px;
+    }
+
+    .featured-shop-button {
+        width: 100%;
+        max-width: 250px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 20px 10px;
+    }
+}

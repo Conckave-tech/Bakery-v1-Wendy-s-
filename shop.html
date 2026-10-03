@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Wendy's Bakery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="reviews.html">Reviews</a>
+</nav>
+
+<header>
+    <h1>Shop</h1>
+    <p class="tagline">Choose something delicious</p>
+</header>
+
+<main>
+    <h2>Our Cakes</h2>
+    
+    <!-- CAKES FIRST - customer sees menu immediately -->
+    <section class="shop-section">
+        <div class="product-card">
+            <h3>Chocolate Cake</h3>
+            <img src="chocolate-cake.jpg" alt="Chocolate Cake">
+            <p>Rich and delicious chocolate cake.</p>
+            <p>$8.00</p>
+            <button onclick="orderCake('Chocolate Cake', 8)">Order Now</button>
+        </div>
+
+        <div class="product-card">
+            <h3>Vanilla Cake</h3>
+            <img src="vanila-cake.jpg" alt="Vanilla Cake">
+            <p>Soft and sweet vanilla cake.</p>
+            <p>$7.00</p>
+            <button onclick="orderCake('Vanilla Cake', 7)">Order Now</button>
+        </div>
+        
+        <div class="product-card">
+            <h3>Birthday Cake</h3>
+            <img src="birthday-cake.jpg" alt="Birthday Cake">
+            <p>Perfect for birthdays and celebrations.</p>
+            <p>$10.00</p>
+            <button onclick="orderCake('Birthday Cake', 10)">Order Now</button>
+        </div>
+        
+        <div class="product-card">
+            <h3>Eclairs</h3>
+            <img src="eclairs.jpg" alt="Eclairs">
+            <p>Soft pastries filled with sweet cream.</p>
+            <p>$5.00</p>
+            <button onclick="orderCake('Eclairs', 5)">Order Now</button>
+        </div>
+        
+        <div class="product-card">
+            <h3>Red Velvet Cake</h3>
+            <img src="red-velvet-cake.jpg" alt="Red Velvet Cake">
+            <p>Soft, rich cake with a smooth cream filling.</p>
+           <p>$12.00</p>
+           <button onclick="orderCake('Red Velvet Cake', 12)">Order Now</button>
+       </div>
+       
+       <div class="product-card">
+           <h3>Strawberry Cake</h3>
+           <img src="strawberry-cake.jpg" alt="Strawberry Cake">
+           <p>Light, sweet cake with fresh strawberry flavor.</p>
+           <p>$11.00</p>
+           <button onclick="orderCake('Strawberry Cake', 11)">Order Now</button>
+       </div>
+    </section>
+
+    <!-- CHECKOUT AFTER - now it makes sense -->
+    <div id="order-area">
+        <h3>Selected Cake</h3>
+        <p id="selected-cake">Nothing selected yet.</p>
+        <p id="selected-price">$0.00</p>
+        
+        <label for="quantity">Quantity</label>
+        <input type="number" id="quantity" min="1" value="1">
+        
+        <button onclick="addToOrder()">Add to Order</button>
+    </div>
+    
+    <div id="order-list">
+        <h3>Your Order</h3>
+    </div>
+    
+    <div id="grand-total">Grand Total: $0.00</div>
+    
+    <button id="clear-order">Clear Order</button>
+    <button id="whatsapp-order">Order on WhatsApp</button>
+    
+    <div id="customer-details">
+        <h3>Customer Details</h3>
+        <label for="customer-name">Name</label>
+        <input type="text" id="customer-name" placeholder="Enter your name">
+        <label for="customer-phone">Phone Number</label>
+        <input type="tel" id="customer-phone" placeholder="Enter your phone number">
+        <label for="delivery-address">Delivery Address</label>
+        <textarea id="delivery-address" placeholder="Enter your delivery address"></textarea>
+    </div>
+</main>
+
+<footer>
+    <p>Wendy's Bakery © 2026</p>
+</footer>
+<script src="shop.js"></script>
+</body>
+</html>

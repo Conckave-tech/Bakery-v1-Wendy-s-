@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - Wendy's Bakery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="reviews.html">Reviews</a>
+</nav>
+
+<header>
+    <h1 id="page-title">Reviews</h1 >
+    <p class="tagline">What people are saying</p>
+</header>
+
+<main>
+    <h2>Customer Reviews</h2>
+
+    <section>
+        <div class="review-card">
+            <h3>Sarah</h3>
+            <p class="rating">★★★★★</p>
+            <p>The chocolate cake was delicious!</p>
+            <p class="review-date">September 2026</p>
+        </div>
+
+        <div class="review-card">
+            <h3>James</h3>
+            <p class="rating">★★★★★</p>
+            <p>The vanilla cake was soft and fresh.</p>
+            <p class="review-date">September 2026</p>
+        </div>
+        
+        <div class="review-card">
+            <h3>Maria</h3>
+            <p class="rating">★★★★★</p>
+            <p>The birthday cake looked amazing and tasted even better!</p>
+            <p class="review-date">September 2026</p>
+       </div>
+    </section>
+    
+    <section class="review-form-section">
+    <h2>Leave a Review</h2>
+
+    <form id="review-form">
+        <label for="review-name">Name</label>
+        <input type="text" id="review-name" placeholder="Your name"  required>
+
+        <label for="review-text">Your Review</label>
+        <textarea id="review-text" placeholder="Tell us what you think" required maxlength="300"></textarea>
+        <p class="character-count">0 / 300 characters</p>
+        
+        <label>Rating</label>
+
+<div id="star-rating">
+    <button type="button" data-rating="1">★</button>
+    <button type="button" data-rating="2">★</button>
+    <button type="button" data-rating="3">★</button>
+    <button type="button" data-rating="4">★</button>
+    <button type="button" data-rating="5">★</button>
+</div>
+
+        <button type="submit">Submit Review</button>
+    </form>
+    <p id="review-message"</p>
+</section>
+</main>
+
+<footer>
+    <p>Wendy's Bakery © 2026</p>
+</footer>
+<script src="reviews.js"></script>
+</body>
+</html>
